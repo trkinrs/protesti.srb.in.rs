@@ -4,25 +4,11 @@ layout: page
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <h2>Potpiši peticiju putem eUprave i Consent ID mobile aplikacije</h2>
 
-<b>Potrebno je:</b> Consent ID mobilna aplikacija i 3 minuta vaseg vremena.
+U <b>samo 3 koraka</b> uz pomoć Consent ID mobilne aplikacije potpišite peticiju za manje od 2 minuta.
 
-Možete skinuti word dokument sa <a href="https://drive.google.com/drive/folders/1EgTIIFL1BIAv3xT2u2bHpQOO_zhzDBa0">Google Drive</a> i popuniti na vašem računaru
-ili možete popuniti ovaj formular da generišete PDF
-<div style="text-align: center; border: 1px solid; padding-top: 20px">
-  <label>Ime i prezime: <input type="text" id="name" placeholder="Željko Jevtić"/></label><br>
-  <label>Broj lične karte i mesto izdavanja: <input type="text" id="id" placeholder="008204889, Užice" /></label><br><br>
-  <button onclick="generatePDF()" style="width: 90%; margin-bottom: 20px;  background-color: #2563eb; color: white; padding: 12px; border-radius: 6px; border: none; cursor: pointer; font-weight: bold; transition: background-color 0.2s">
-    <svg style="display: inline-block; vertical-align: middle; margin-right: 8px" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M13 3v12l-5-5m5 5 5-5m2 10H4"></path>
-    </svg>
-    Preuzmi PDF
-  </button>
-</div>
-Zatim idite na sajt za potpisivanje <a href="https://cloud.eid.gov.rs/">https://cloud.eid.gov.rs/</a>
-Kada završite potpisivanje, pošaljite potpisani dokument na <a href="mailto:uniplenum@gmail.com?subject=Potpisana%20peticija&body=U%20prilogu">uniplenum@gmail.com</a>
-
-<!-- Hidden container to render as PDF -->
-<div id="pdf-content">
+<h5>1. Napravite zahtev</h5>
+Tekst peticije je sa <a href="https://drive.google.com/drive/folders/1EgTIIFL1BIAv3xT2u2bHpQOO_zhzDBa0" target="_blank">Drive</a>.
+<div id="pdf-content" style="background: #eeeeee; padding: 5px; text-align: center">
   <style>
     .font-size {
       font-size: 12px;
@@ -33,7 +19,7 @@ Kada završite potpisivanje, pošaljite potpisani dokument na <a href="mailto:un
       margin-top: 20px;
       margin-left: auto;
       margin-right: auto;
-      min-height: 300px;
+      min-height: 130px;
     }
     thead, tbody, tr {
       width: 98%;
@@ -54,7 +40,7 @@ Kada završite potpisivanje, pošaljite potpisani dokument na <a href="mailto:un
       page-break-after: auto;
     }
   </style>
-  <h4>Peticija za raspisivanje vanrednih parlamentarnih izbora</h4>
+  <h4 style="">Peticija za raspisivanje vanrednih parlamentarnih izbora</h4>
 
   <p class="font-size">U skladu sa članom 109. Ustava Republike Srbije, zahtevamo:</p>
 
@@ -79,6 +65,22 @@ Kada završite potpisivanje, pošaljite potpisani dokument na <a href="mailto:un
     </tr>
   </table>
 </div>
+
+
+Popunite ovaj formular da generišete PDF sa vašim podacima (mi ne skupljamo vaše podatke, za razliku od eUprave koja ukoliko dozvolite šalje podatke Google
+Analitici). 
+<div style="text-align: center; border: 1px solid; padding-top: 20px">
+  <label>Ime i prezime: <input type="text" id="name" placeholder="Željko Jevtić"/></label><br>
+  <label>Broj lične karte i mesto izdavanja: <input type="text" id="id" placeholder="008204889, Užice" size="18" /></label>
+  <button onclick="generatePDF()" style="width: 90%; margin-bottom: 20px;  background-color: #2563eb; color: white; padding: 12px; border-radius: 6px; border: none; cursor: pointer; font-weight: bold; transition: background-color 0.2s">
+    <svg style="display: inline-block; vertical-align: middle; margin-right: 8px" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M13 3v12l-5-5m5 5 5-5m2 10H4"></path>
+    </svg>
+    Preuzmi PDF
+  </button>
+</div>
+Zatim idite na sajt za potpisivanje <a href="https://cloud.eid.gov.rs/">https://cloud.eid.gov.rs/</a>
+Kada završite potpisivanje, pošaljite potpisani dokument na <a href="mailto:uniplenum@gmail.com?subject=Potpisana%20peticija&body=U%20prilogu">uniplenum@gmail.com</a>
 
 <script>
   document.getElementById('name').addEventListener('input', function () {
