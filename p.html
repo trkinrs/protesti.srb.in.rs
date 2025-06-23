@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generate PDF in Browser</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <h2>Generate PDF</h2>
+
+  <label>Name: <input type="text" id="name" /></label><br>
+  <label>ID Number: <input type="text" id="id" /></label><br><br>
+  <button onclick="generatePDF()">Download PDF</button>
+
+  <!-- Hidden container to render as PDF -->
+  <div id="pdf-content" style="display: none;">
+    <h1>Certificate</h1>
+    <p>Name: <span id="pdf-name"></span></p>
+    <p>ID: <span id="pdf-id"></span></p>
+  </div>
+
+  <script>
+    function generatePDF() {
+      const name = document.getElementById("name").value;
+      const id = document.getElementById("id").value;
+
+      // Fill in PDF content
+      document.getElementById("pdf-name").textContent = name;
+      document.getElementById("pdf-id").textContent = id;
+
+      const element = document.getElementById("pdf-content");
+      element.style.display = "block";
+
+      html2pdf()
+        .set({ margin: 10, filename: 'certificate.pdf', html2canvas: { scale: 2 } })
+        .from(element)
+        .save()
+        .then(() => {
+          element.style.display = "none"; // Hide again
+        });
+    }
+  </script>
+</body>
+</html>
