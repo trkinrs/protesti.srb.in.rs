@@ -4,14 +4,21 @@ layout: page
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <h2>Potpiši peticiju putem eUprave i Consent ID mobile aplikacije</h2>
 
+<b>Potrebno je:</b> Consent ID mobilna aplikacija i 3 minuta vaseg vremena.
 
 Možete skinuti word dokument sa <a href="https://drive.google.com/drive/folders/1EgTIIFL1BIAv3xT2u2bHpQOO_zhzDBa0">Google Drive</a> i popuniti na vašem računaru
 ili možete popuniti ovaj formular da generišete PDF
-<div style="text-align: center; border: 1px solid; padding: 20px">
+<div style="text-align: center; border: 1px solid; padding-top: 20px">
   <label>Ime i prezime: <input type="text" id="name" placeholder="Željko Jevtić"/></label><br>
   <label>Broj lične karte i mesto izdavanja: <input type="text" id="id" placeholder="008204889, Užice" /></label><br><br>
-  <button onclick="generatePDF()" style="width: 100%">Preuzmi PDF</button>
+  <button onclick="generatePDF()" style="width: 90%; margin-bottom: 20px;  background-color: #2563eb; color: white; padding: 12px; border-radius: 6px; border: none; cursor: pointer; font-weight: bold; transition: background-color 0.2s">
+    <svg style="display: inline-block; vertical-align: middle; margin-right: 8px" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M13 3v12l-5-5m5 5 5-5m2 10H4"></path>
+    </svg>
+    Preuzmi PDF
+  </button>
 </div>
+Zatim idite na sajt za potpisivanje <a href="https://cloud.eid.gov.rs/">https://cloud.eid.gov.rs/</a>
 Kada završite potpisivanje, pošaljite potpisani dokument na <a href="mailto:uniplenum@gmail.com?subject=Potpisana%20peticija&body=U%20prilogu">uniplenum@gmail.com</a>
 
 <!-- Hidden container to render as PDF -->
@@ -20,20 +27,24 @@ Kada završite potpisivanje, pošaljite potpisani dokument na <a href="mailto:un
     .font-size {
       font-size: 12px;
     }
-    table, tbody {
+    table {
       border-collapse: collapse;
-      width: 100%;
+      width: 95%;
       margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      min-height: 300px;
     }
     thead, tbody, tr {
-      width: 99%;
+      width: 98%;
       display: table;
       table-layout: fixed;
     }
     td {
       border: 1px solid #000;
-      padding: 8px;
+      padding: 4px;
       text-align: left;
+      word-wrap: break-word;
     }
     table {
       page-break-inside: auto;
@@ -54,23 +65,19 @@ Kada završite potpisivanje, pošaljite potpisani dokument na <a href="mailto:un
   </ol>
 
   <table class="font-size">
-    <tbody>
-      <tr>
-        <td>Ime i prezime</td>
-        <td><span id="pdf-name">Željko Jevtić</span></td>
-      </tr>
-      <tr>
-        <td>Broj lične karte i mesto izdavanja</td>
-        <td><span id="pdf-id">008204889, Užice</span></td>
-      </tr>
-      <tr>
-        <td>Elektronski potpis</td>
-        <td></td>
-      </tr>
-    </tbody>
+    <tr>
+      <td>Ime i prezime</td>
+      <td><span id="pdf-name">Željko Jevtić</span></td>
+    </tr>
+    <tr>
+      <td>Broj lične karte i mesto izdavanja</td>
+      <td><span id="pdf-id">008204889, Užice</span></td>
+    </tr>
+    <tr>
+      <td>Elektronski potpis</td>
+      <td></td>
+    </tr>
   </table>
-  &nbsp;
-  &nbsp;
 </div>
 
 <script>
@@ -78,9 +85,15 @@ Kada završite potpisivanje, pošaljite potpisani dokument na <a href="mailto:un
     const name = this.value;
     document.getElementById('pdf-name').textContent = name;
   });
+  document.getElementById('name').addEventListener('keypress', function (e) {
+    if (e.keyCode === 13) generatePDF();
+  });
   document.getElementById('id').addEventListener('input', function () {
     const name = this.value;
     document.getElementById('pdf-id').textContent = name;
+  });
+  document.getElementById('id').addEventListener('keypress', function (e) {
+    if (e.keyCode === 13) generatePDF();
   });
   function generatePDF() {
     const name = document.getElementById("name").value;
@@ -93,12 +106,10 @@ Kada završite potpisivanje, pošaljite potpisani dokument na <a href="mailto:un
     const element = document.getElementById("pdf-content");
     element.style.display = "block";
 
-    html2pdf()
-      .set({
+    html2pdf().set({
         margin: 10,
         filename: 'peticija-za-izbore.pdf',
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        pagebreak: { mode: 'avoid-all' }
       })
       .from(element)
       .save();
