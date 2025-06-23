@@ -1,43 +1,106 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Generate PDF in Browser</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-</head>
-<body>
-  <h2>Generate PDF</h2>
+---
+layout: page
+---
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<h2>Potpiši peticiju putem eUprave i Consent ID mobile aplikacije</h2>
 
-  <label>Name: <input type="text" id="name" /></label><br>
-  <label>ID Number: <input type="text" id="id" /></label><br><br>
-  <button onclick="generatePDF()">Download PDF</button>
 
-  <!-- Hidden container to render as PDF -->
-  <div id="pdf-content" style="display: none;">
-    <h1>Certificate</h1>
-    <p>Name: <span id="pdf-name"></span></p>
-    <p>ID: <span id="pdf-id"></span></p>
-  </div>
+Možete skinuti word dokument sa <a href="https://drive.google.com/drive/folders/1EgTIIFL1BIAv3xT2u2bHpQOO_zhzDBa0">Google Drive</a> i popuniti na vašem računaru
+ili možete popuniti ovaj formular da generišete PDF
+<div style="text-align: center; border: 1px solid; padding: 20px">
+  <label>Ime i prezime: <input type="text" id="name" placeholder="Željko Jevtić"/></label><br>
+  <label>Broj lične karte i mesto izdavanja: <input type="text" id="id" placeholder="008204889, Užice" /></label><br><br>
+  <button onclick="generatePDF()" style="width: 100%">Preuzmi PDF</button>
+</div>
+Kada završite potpisivanje, pošaljite potpisani dokument na <a href="mailto:uniplenum@gmail.com?subject=Potpisana%20peticija&body=U%20prilogu">uniplenum@gmail.com</a>
 
-  <script>
-    function generatePDF() {
-      const name = document.getElementById("name").value;
-      const id = document.getElementById("id").value;
-
-      // Fill in PDF content
-      document.getElementById("pdf-name").textContent = name;
-      document.getElementById("pdf-id").textContent = id;
-
-      const element = document.getElementById("pdf-content");
-      element.style.display = "block";
-
-      html2pdf()
-        .set({ margin: 10, filename: 'certificate.pdf', html2canvas: { scale: 2 } })
-        .from(element)
-        .save()
-        .then(() => {
-          element.style.display = "none"; // Hide again
-        });
+<!-- Hidden container to render as PDF -->
+<div id="pdf-content">
+  <style>
+    .font-size {
+      font-size: 12px;
     }
-  </script>
-</body>
-</html>
+    table, tbody {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+    thead, tbody, tr {
+      width: 99%;
+      display: table;
+      table-layout: fixed;
+    }
+    td {
+      border: 1px solid #000;
+      padding: 8px;
+      text-align: left;
+    }
+    table {
+      page-break-inside: auto;
+    }
+    tr {
+      page-break-inside: avoid;
+      page-break-after: auto;
+    }
+  </style>
+  <h4>Peticija za raspisivanje vanrednih parlamentarnih izbora</h4>
+
+  <p class="font-size">U skladu sa članom 109. Ustava Republike Srbije, zahtevamo:</p>
+
+  <ol class="font-size">
+    <li>od Vlade Republike Srbije da predsedniku Republike uputi obrazloženi predlog za raspuštanje Narodne skupštine Republike Srbije;</li>
+    <li>od predsednika Republike da odmah nakon prijema predloga iz tačke 1. Ukazom raspusti Narodnu skupštinu i raspiše izbore za narodne poslanike;</li>
+    <li>od svih nadležnih institucija Republike Srbije da savesno i odgovorno obavljaju svoj posao i omoguće fer i poštene izbore.</li>
+  </ol>
+
+  <table class="font-size">
+    <tbody>
+      <tr>
+        <td>Ime i prezime</td>
+        <td><span id="pdf-name">Željko Jevtić</span></td>
+      </tr>
+      <tr>
+        <td>Broj lične karte i mesto izdavanja</td>
+        <td><span id="pdf-id">008204889, Užice</span></td>
+      </tr>
+      <tr>
+        <td>Elektronski potpis</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  &nbsp;
+  &nbsp;
+</div>
+
+<script>
+  document.getElementById('name').addEventListener('input', function () {
+    const name = this.value;
+    document.getElementById('pdf-name').textContent = name;
+  });
+  document.getElementById('id').addEventListener('input', function () {
+    const name = this.value;
+    document.getElementById('pdf-id').textContent = name;
+  });
+  function generatePDF() {
+    const name = document.getElementById("name").value;
+    const id = document.getElementById("id").value;
+
+    // Fill in PDF content
+    document.getElementById("pdf-name").textContent = name;
+    document.getElementById("pdf-id").textContent = id;
+
+    const element = document.getElementById("pdf-content");
+    element.style.display = "block";
+
+    html2pdf()
+      .set({
+        margin: 10,
+        filename: 'peticija-za-izbore.pdf',
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      })
+      .from(element)
+      .save();
+  }
+</script>
