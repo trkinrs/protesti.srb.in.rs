@@ -1,0 +1,217 @@
+# Site settings
+title:       Pixyll
+email:       your_email@example.com
+author:      John Otander
+description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
+baseurl:     ""
+url:         "https://pixyll.com"
+date_format: "%b %-d, %Y"
+header_pages:
+ - about.md
+ - contact.html
+
+# Google services
+google_verification:
+# Use either direct GA implementation or set up GTM account
+# - using both will skew your data (leave blank to not use at all)
+google_analytics:
+google_tag_manager:
+# Bing services
+bing_verification:
+
+# Optional features
+animated:             false
+show_related_posts:   false
+show_post_footers:    false
+show_social_icons:    false
+ajaxify_contact_form: false
+enable_mathjax: false
+extended_fonts: false
+enable_anchorjs: false
+# Preview image for social media aka og:image and twitter:image
+post_preview_image: false
+
+# Facebook Page integration
+# (for instant articles and other stuff)
+fb_page: false
+fb_page_id:
+
+# Disqus post comments
+# (leave blank to disable Disqus)
+disqus_shortname:
+
+# Facebook Comments plugin
+# (leave blank to disable Facebook Comments, otherwise set it to true)
+facebook_comments:
+facebook_appid:
+facebook_comments_number: 10
+
+# Social icons
+github_username:
+reddit_username:
+bitbucket_username:
+stackoverflow_id:
+twitter_username:
+skype_username:
+steam_nickname:
+google_plus_id:
+linkedin_username:
+angellist_username:
+medium_id:
+bitcoin_url:
+paypal_url:
+flattr_button:
+telegram_username:
+vk_id:
+
+# Post sharing icons
+show_sharing_icons: false
+# Change to 'true' to enable individual icons
+share_facebook: false
+share_twitter: false
+share_googleplus: false
+share_linkedin: false
+share_digg: false
+share_tumblr: false
+share_reddit: false
+share_stumbleupon: false
+share_hackernews: false
+
+text:
+  pagination:
+    newer: 'Newer'
+    older: 'Older'
+  share_buttons:
+    text:         'Share this post!'
+    facebook:     'Share on Facebook'
+    twitter:      'Share on Twitter'
+    googleplus:   'Share on Google+'
+    linkedin:     'Share on LinkedIn'
+    digg:         'Share on Digg'
+    tumblr:       'Share on Tumblr'
+    reddit:       'Share on Reddit'
+    stumbleupon:  'Share on StumbleUpon'
+    hackernews:   'Share on Hacker News'
+  post:
+    updated:        'Updated'
+    minute_read:    'minute read'
+    related_posts:  'Related Posts'
+  index:
+    coming_soon: 'Coming soon...'
+  contact:
+    email:    'Email Address'
+    content:  'What would you like to say?'
+    subject:  'New submission!'
+    submit:   'Say Hello'
+    ajax:
+      sending:  'sending..'
+      sent:     'Message sent!'
+      error:    'Error!'
+  thanks: 'Thanks for contacting us. We will reply as soon as possible.'
+  og_locale: 'en_US'
+
+# Build settings
+markdown:     kramdown
+redcarpet:
+  extensions: ['smart', 'tables', 'with_toc_data']
+permalink:    pretty
+paginate:     4
+sass:
+  style: compressed
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+# https://github.com/jekyll/jekyll/issues/2938
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
+  - README.md
+  - screenshot.png
+  - vendor
+_schema:
+  title: text_field
+  email: text_field
+  author: text_field
+  description: text_area
+  url: text_field
+  date_format: text_field
+  header_pages:
+  - text_field
+  google_verification: text_field
+  google_tag_manager: text_field
+  bing_verification: text_field
+  animated: check_box
+  show_related_posts: check_box
+  show_post_footers: check_box
+  show_social_icons: check_box
+  ajaxify_contact_form: check_box
+  enable_mathjax: check_box
+  extended_fonts: check_box
+  enable_anchorjs: check_box
+  post_preview_image: check_box
+  fb_page: check_box
+  fb_page_id: text_field
+  disqus_shortname: text_field
+  facebook_comments: check_box
+  facebook_appid: text_field
+  facebook_comments_number: number_field
+  github_username: text_field
+  reddit_username: text_field
+  bitbucket_username: text_field
+  stackoverflow_id: text_field
+  twitter_username: text_field
+  skype_username: text_field
+  steam_nickname: text_field
+  google_plus_id: text_field
+  linkedin_username: text_field
+  angellist_username: text_field
+  medium_id: text_field
+  bitcoin_url: text_field
+  paypal_url: text_field
+  flattr_button: text_field
+  telegram_username: text_field
+  vk_id: text_field
+  show_sharing_icons: check_box
+  share_facebook: check_box
+  share_twitter: check_box
+  share_googleplus: check_box
+  share_linkedin: check_box
+  share_digg: check_box
+  share_tumblr: check_box
+  share_reddit: check_box
+  share_stumbleupon: check_box
+  share_hackernews: check_box
+  text:
+    pagination:
+      newer: text_field
+      older: text_field
+    share_buttons:
+      text:         text_field
+      facebook:     text_field
+      twitter:      text_field
+      googleplus:   text_field
+      linkedin:     text_field
+      digg:         text_field
+      tumblr:       text_field
+      reddit:       text_field
+      stumbleupon:  text_field
+      hackernews:   text_field
+    post:
+      updated:        text_field
+      minute_read:    text_field
+      related_posts:  text_field
+    index:
+      coming_soon: text_field
+    contact:
+      email:    text_field
+      content:  text_field
+      subject:  text_field
+      submit:   text_field
+      ajax:
+        sending:  text_field
+        sent:     text_field
+        error:    text_field
+    thanks: text_field
+    og_locale: text_field
+  paginate: number_field
