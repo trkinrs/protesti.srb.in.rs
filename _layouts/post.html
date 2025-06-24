@@ -1,5 +1,10 @@
 ---
 layout: default
+_schema:
+  layout: static_field
+  title: text_field
+  summary: text_area
+  categories: text_field
 ---
 
 {% assign minutes = content | strip_html | number_of_words | divided_by: 180 %}

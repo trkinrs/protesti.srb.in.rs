@@ -7,7 +7,7 @@ U <b>samo 3 koraka</b> uz pomoć Consent ID mobilne aplikacije potpišite petici
 
 <h3>1. Napravite zahtev</h3>
 Tekst peticije je sa <a href="https://drive.google.com/drive/folders/1EgTIIFL1BIAv3xT2u2bHpQOO_zhzDBa0" target="_blank">Drive</a>.
-<iframe id="pdf-iframe" src='/izbori' frameborder="0" style="border=none!important; width: 100%; height: auto;"></iframe>
+<iframe id="pdf-iframe" src='{{ 'izbori' | relative_url }}' frameborder="0" style="border=none!important; width: 100%; height: auto;"></iframe>
 
 Popunite ovaj formular da generišete PDF sa vašim podacima (mi ne skupljamo vaše podatke, ali na žalost, obratite pažnju na eUpravu da ne dozvolite slanje
 podataka Google).
@@ -24,3 +24,4 @@ Kada završite potpisivanje, pošaljite potpisani dokument na <a href="mailto:un
     iframe.style.height = iframeDoc.body.scrollHeight + "px";
   };
 </script>
+

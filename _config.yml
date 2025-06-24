@@ -112,8 +112,8 @@ text:
 
 # Build settings
 markdown:     kramdown
-redcarpet:
-  extensions: ['smart', 'tables', 'with_toc_data']
+# redcarpet:
+#   extensions: ['smart', 'tables', 'with_toc_data']
 permalink:    pretty
 paginate:     4
 sass:
@@ -129,89 +129,8 @@ exclude:
   - README.md
   - screenshot.png
   - vendor
+
 _schema:
-  title: text_field
-  email: text_field
-  author: text_field
   description: text_area
-  url: text_field
-  date_format: text_field
   header_pages:
   - text_field
-  google_verification: text_field
-  google_tag_manager: text_field
-  bing_verification: text_field
-  animated: check_box
-  show_related_posts: check_box
-  show_post_footers: check_box
-  show_social_icons: check_box
-  ajaxify_contact_form: check_box
-  enable_mathjax: check_box
-  extended_fonts: check_box
-  enable_anchorjs: check_box
-  post_preview_image: check_box
-  fb_page: check_box
-  fb_page_id: text_field
-  disqus_shortname: text_field
-  facebook_comments: check_box
-  facebook_appid: text_field
-  facebook_comments_number: number_field
-  github_username: text_field
-  reddit_username: text_field
-  bitbucket_username: text_field
-  stackoverflow_id: text_field
-  twitter_username: text_field
-  skype_username: text_field
-  steam_nickname: text_field
-  google_plus_id: text_field
-  linkedin_username: text_field
-  angellist_username: text_field
-  medium_id: text_field
-  bitcoin_url: text_field
-  paypal_url: text_field
-  flattr_button: text_field
-  telegram_username: text_field
-  vk_id: text_field
-  show_sharing_icons: check_box
-  share_facebook: check_box
-  share_twitter: check_box
-  share_googleplus: check_box
-  share_linkedin: check_box
-  share_digg: check_box
-  share_tumblr: check_box
-  share_reddit: check_box
-  share_stumbleupon: check_box
-  share_hackernews: check_box
-  text:
-    pagination:
-      newer: text_field
-      older: text_field
-    share_buttons:
-      text:         text_field
-      facebook:     text_field
-      twitter:      text_field
-      googleplus:   text_field
-      linkedin:     text_field
-      digg:         text_field
-      tumblr:       text_field
-      reddit:       text_field
-      stumbleupon:  text_field
-      hackernews:   text_field
-    post:
-      updated:        text_field
-      minute_read:    text_field
-      related_posts:  text_field
-    index:
-      coming_soon: text_field
-    contact:
-      email:    text_field
-      content:  text_field
-      subject:  text_field
-      submit:   text_field
-      ajax:
-        sending:  text_field
-        sent:     text_field
-        error:    text_field
-    thanks: text_field
-    og_locale: text_field
-  paginate: number_field
