@@ -1,6 +1,7 @@
 <html>
   <head>
     <style>
+
       table {
         border-collapse: collapse;
         width: 95%;
@@ -22,9 +23,9 @@
     </style>
   </head>
   <body>
-    <div style="background: #eeeeee; padding: 5px; text-align: center">
+    <div style="background: #eeeeee; padding: 5px;">
       <div id="pdf-content">
-        <h2 style="">Peticija za raspisivanje vanrednih parlamentarnih izbora</h2>
+        <h2 style=" text-align: center">Peticija za raspisivanje vanrednih parlamentarnih izbora</h2>
 
         <p class="font-size">U skladu sa članom 109. Ustava Republike Srbije, zahtevamo:</p>
 
