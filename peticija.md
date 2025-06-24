@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Peticija za izbore
 ---
 <h2>Potpiši peticiju putem eUprave i Consent ID mobile aplikacije</h2>
 
