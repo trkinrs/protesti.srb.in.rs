@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <html>
   <head>
     <style>
