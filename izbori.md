@@ -48,7 +48,6 @@
             <td></td>
           </tr>
         </table>
-<h5>Hvala</h5>
       </div>
     </div>
     <div style="text-align: center; padding-top: 20px; font-size: 20px; ">

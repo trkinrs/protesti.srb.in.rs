@@ -14,7 +14,7 @@ Popunite ovaj formular da generišete PDF sa vašim podacima (mi ne skupljamo va
 podataka Google).
 
 <h3>2. Potpišite PDF</h3>
-Zatim idite na sajt za potpisivanje <a href="https://cloud.eid.gov.rs/">https://cloud.eid.gov.rs/</a>
+Zatim idite na sajt za potpisivanje <a href="https://cloud.eid.gov.rs/" target="_blank" >https://cloud.eid.gov.rs/</a>
 <h3>3. Pošaljite mail sa peticijom</h3>
 Kada završite potpisivanje, pošaljite potpisani dokument na <a href="mailto:uniplenum@gmail.com?subject=Potpisana%20peticija&body=U%20prilogu">uniplenum@gmail.com</a>
 
