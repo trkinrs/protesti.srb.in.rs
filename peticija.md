@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Peticija za izbore
+title: Peticija za vanredne izbore
 ---
 <h2>Potpiši peticiju putem eUprave i Consent ID mobile aplikacije</h2>
 
@@ -25,4 +25,5 @@ Kada završite potpisivanje, pošaljite potpisani dokument na <a href="mailto:un
     iframe.style.height = iframeDoc.body.scrollHeight + "px";
   };
 </script>
+
 

@@ -80,13 +80,16 @@
       });
       const element = document.getElementById("pdf-content");
       function generatePDF() {
+        const name = document.getElementById('name').textContent;
+        document.getElementById('pdf-name').textContent = name;
+        const id = document.getElementById('id').textContent;
+        document.getElementById('pdf-id').textContent = id;
         html2pdf().set({
             margin: 10,
-            filename: 'peticija-za-izbore.pdf',
             pagebreak: { mode: 'avoid-all' },
           })
           .from(element)
-          .save("from-iframe.pdf");
+          .save(`Peticija za izbore ${name} ${id}.pdf`);
       }
     </script>
   </body>
