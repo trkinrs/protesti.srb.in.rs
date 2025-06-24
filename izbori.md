@@ -48,6 +48,7 @@
             <td></td>
           </tr>
         </table>
+<h5>Hvala</h5>
       </div>
     </div>
     <div style="text-align: center; padding-top: 20px; font-size: 20px; ">
@@ -80,9 +81,9 @@
       });
       const element = document.getElementById("pdf-content");
       function generatePDF() {
-        const name = document.getElementById('name').textContent;
+        const name = document.getElementById('name').value;
         document.getElementById('pdf-name').textContent = name;
-        const id = document.getElementById('id').textContent;
+        const id = document.getElementById('id').value;
         document.getElementById('pdf-id').textContent = id;
         html2pdf().set({
             margin: 10,
