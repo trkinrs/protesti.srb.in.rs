@@ -64,3 +64,10 @@ end
 
 desc "Full deploy: commit source and publish site"
 task commit_and_push: [ :commit_source, :deploy ]
+
+
+desc "Pull the repo"
+task :pull do |task, args|
+    sh "git pull"
+end
+
