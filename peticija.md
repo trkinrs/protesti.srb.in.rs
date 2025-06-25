@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Peticija za vanredne izbore
+image: assets/images/Screenshot 2025-06-25 at 13.09.44.png
 ---
 <h2>Potpiši peticiju putem eUprave i Consent ID mobile aplikacije</h2>
 
@@ -36,4 +37,5 @@ Kada završite potpisivanje, pošaljite potpisani dokument na <a href="mailto:un
     allowfullscreen>
   </iframe>
 </div>
+
 
