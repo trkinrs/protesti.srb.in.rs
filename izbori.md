@@ -25,6 +25,16 @@ layout: null
         display: table;
         table-layout: fixed;
       }
+      @keyframes fadeInOut {
+        0% { opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { opacity: 0; }
+      }
+
+      #notice {
+        animation: fadeInOut 15s forwards;
+      }
     </style>
   </head>
   <body>
@@ -65,6 +75,7 @@ layout: null
         </svg>
         Preuzmi PDF
       </button>
+      <small id="notice" style="height: 1rem; display: block"></small>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
@@ -73,6 +84,7 @@ layout: null
       const downloadBtn = document.getElementById('download-btn');
       const nameInput = document.getElementById('name');
       const idInput = document.getElementById('id');
+      const noticeDiv = document.getElementById('notice');
 
       function checkInputs() {
         if (nameInput.value.trim() !== '' && idInput.value.trim() !== '') {
@@ -105,16 +117,23 @@ layout: null
       });
       const element = document.getElementById("pdf-content");
       function generatePDF() {
-        const name = document.getElementById('name').value;
-        document.getElementById('pdf-name').textContent = name;
-        const id = document.getElementById('id').value;
-        document.getElementById('pdf-id').textContent = id;
+        document.getElementById('pdf-name').textContent = nameInput.value;
+        document.getElementById('pdf-id').textContent = idInput.value;
+        const fileName = `Peticija za izbore ${nameInput.value} ${idInput.value}.pdf`;
         html2pdf().set({
             margin: 10,
             pagebreak: { mode: 'avoid-all' },
           })
           .from(element)
-          .save(`Peticija za izbore ${name} ${id}.pdf`);
+          .save(fileName);
+        nameInput.value = "";
+        idInput.value = "";
+        checkInputs();
+        noticeDiv.textContent = `Preuzeto ${fileName}`;
+        noticeDiv.style.display = 'block';
+        setTimeout(() => {
+          noticeDiv.style.display = 'none';
+        }, 15000);
       }
     </script>
   </body>
