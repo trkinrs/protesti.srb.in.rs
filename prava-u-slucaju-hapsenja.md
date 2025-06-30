@@ -1,6 +1,7 @@
 ---
 layout: page
-image: ''
+title: Prava u slučaju hapšenja
+image: ""
 ---
 UPUTSTVA ZA EVENTUALNE NEŽELJENE SITUACIJE
 
