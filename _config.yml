@@ -10,6 +10,7 @@ header_pages:
 - about.md
 - contact.html
 - peticija.md
+- prava-u-slucaju-hapsenja.md
 text:
   pagination:
     newer: Newer
