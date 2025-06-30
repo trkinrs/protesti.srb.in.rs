@@ -14,3 +14,12 @@ Ovo je snimak od jutros u Beogradu
   <source src="{{ "assets/images/maskirani policajci na mlade protestante.mp4" | relative_url }}" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+
+
+Ipak mnogo je vise naroda koji podrzava studente, pa u ovom slucaju maskirani
+policajci ne mogu nista
+
+<video width="640" height="360" controls>
+  <source src="{{ "assets/images/setnja non stop.mp4" | relative_url }}" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
