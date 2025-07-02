@@ -7,7 +7,7 @@ baseurl: ''
 url: https://protesti.srb.in.rs/
 date_format: "%b %-d, %Y"
 header_pages:
-- contact.html
+- contact.md
 - peticija.md
 - prava-u-slucaju-hapsenja.md
 text:
