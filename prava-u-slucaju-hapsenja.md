@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Prava u slučaju hapšenja
-image: ""
+image: ''
 ---
 UPUTSTVA ZA EVENTUALNE NEŽELJENE SITUACIJE
 
@@ -45,3 +45,5 @@ U SLUČAJU STAMPEDA
 * Ne okreći se, ne pokušavaj da se vratiš ili tražiš druge.
 * Trči pravolinijski napred, gledaj ispred sebe i pazi da ne padneš.
 * Ostani na nogama i izbegavaj paniku — masa može naneti ozbiljne povrede.
+
+
