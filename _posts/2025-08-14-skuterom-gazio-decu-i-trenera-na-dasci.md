@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Skuterom gazio decu i trenera na dasci
-summary: ''
+summary: Skola kajaka za mladu decu od 7 do 14 godina je prekinuta nasilnikom na skuteru...
 categories: ''
 image: assets/images/pancevo_skuter_gazi_decu_i_trenera.mp4
 ---
 Sta reci nego uzas trenutnog stanja u drzavi.
-Vozio skuter u policijskom vlasnistvu i gazio decu i trenera.
+Vozio skuter koji je u policijskom vlasnistvu i gazio decu i trenera.
 I na kraju skuter manijak tuzi trenera sto mu je navodno slomljena ruka.
 [https://nova.rs/vesti/hronika/viknuo-da-uspori-kako-ne-bi-podavio-decu-a-on-se-okrenuo-napravio-krug-i-poceo-da-se-vrti-oko-dece-trener-kajakasa-otkrio-detalje-nezapamcenog-incidenta-na-tamisu/ ](https://nova.rs/vesti/hronika/viknuo-da-uspori-kako-ne-bi-podavio-decu-a-on-se-okrenuo-napravio-krug-i-poceo-da-se-vrti-oko-dece-trener-kajakasa-otkrio-detalje-nezapamcenog-incidenta-na-tamisu/ )
 
@@ -14,4 +14,5 @@ I na kraju skuter manijak tuzi trenera sto mu je navodno slomljena ruka.
   <source src="{{ "assets/images/pancevo_skuter_gazi_decu_i_trenera.mp4" | relative_url }}" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+
 
