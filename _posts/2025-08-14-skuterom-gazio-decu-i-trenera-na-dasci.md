@@ -14,3 +14,4 @@ I na kraju skuter manijak tuzi trenera sto mu je navodno slomljena ruka.
   <source src="{{ "assets/images/pancevo_skuter_gazi_decu_i_trenera.mp4" | relative_url }}" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+
