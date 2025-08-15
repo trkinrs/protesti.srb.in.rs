@@ -10,12 +10,13 @@ Sa zenom i decom smo krenuli na miran protest, odjednom u Strazilovskoj ulici kr
 
 ![rts ne navodi ko baca vatromet]( {{ "assets/images/rts_ne_navodi_ko_baca_vatromet.png" | relative_url }})
 
-Sva sreca pa je goloruke narod bio dovoljno hrabar da ostane i suprostavi se cacijima sa motkama
+Sva sreca pa je goloruk narod bio dovoljno hrabar da ostane i suprostavi se cacijima sa motkama
 
 <video width="640" height="640" controls>
   <source src="{{ "assets/images/hvatanje_batinasa_u_strazilovskoj.mp4" | relative_url }}" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
+
 
 
 
