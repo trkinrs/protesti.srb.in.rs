@@ -13,9 +13,10 @@ Sa zenom i decom smo krenuli na miran protest, odjednom u Strazilovskoj ulici kr
 Sva sreca pa je goloruk narod bio dovoljno hrabar da ostane i suprostavi se cacijima sa motkama
 
 <video width="640" height="640" controls>
-  <source src="{{ "assets/images/hvatanje_batinasa_u_strazilovskoj.mp4" | relative_url }}" type="video/mp4">
+  <source src="{{ "assets/images/vatanje_batinasa_u_strazilovskoj.mp4" | relative_url }}" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
+
 
 
 
