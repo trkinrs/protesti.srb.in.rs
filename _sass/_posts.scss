@@ -33,6 +33,13 @@
   border-radius: 50%;
 }
 
+.post-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+
 .meta,
 .post-meta {
   width: auto;

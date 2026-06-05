@@ -28,6 +28,15 @@ _schema:
   </span>
 </div>
 
+{% if page.image %}
+  {% assign image_extension = page.image | split: '.' | last | downcase %}
+  {% if image_extension == 'mp4' %}
+    <video class="post-image" src="{{ page.image | relative_url }}" controls playsinline></video>
+  {% else %}
+    <img class="post-image" src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}">
+  {% endif %}
+{% endif %}
+
 <article class="post-content">
   {{ content }}
 </article>
