@@ -16,6 +16,16 @@ layout: default
 	    {% endif %}
 	  </p>
           <a href="{{ post.url | relative_url }}" class="post-link"><h3 class="h1 post-title">{{ post.title }}</h3></a>
+          {% if post.image %}
+            {% assign image_extension = post.image | split: '.' | last | downcase %}
+            <a href="{{ post.url | relative_url }}" class="post-link">
+              {% if image_extension == 'mp4' %}
+                <video class="post-image" src="{{ post.image | relative_url }}" controls playsinline></video>
+              {% else %}
+                <img class="post-image" src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}">
+              {% endif %}
+            </a>
+          {% endif %}
           <span class="post-summary">
             {% if post.summary %}
               {{ post.summary }}
