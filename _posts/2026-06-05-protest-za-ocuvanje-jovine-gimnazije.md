@@ -7,4 +7,5 @@ image: assets/images/Očuvanje Jovine gimanzije.jpg
 ---
 <video controls="" src="{{ site.baseurl }}/assets/videos/direktoru_jovine_pozlilo.mp4"></video>
 
+<video controls="" src="{{ site.baseurl }}/assets/videos/1000007821.mp4"></video>
 
